@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Educação Financeira Infantil</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        user-select: none;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        background-image: url(https://andreivictor.ro/codepen/scroll-bg-animation-pinterest/bg_pasta_grid-3f880df3.jpg);
+        animation: scroll 100s linear infinite;
+        overflow-x: hidden;
+        background-size: 100%;
+        background-position: 100%;
+    }
+
+    main {
+        align-self: center;
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: #F9ECD9;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    section:first-child>div:first-child {
+        position: relative;
+        width: 100%;
+    }
+
+    .overlay_display {
+        background-color: rgba(0, 0, 0, 0.623);
+        min-height: 100vh;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 1em;
+    }
+
+    .overlay_display.dispblock {
+        display: block;
+    }
+
+    section:first-child>div:first-child div:first-child>img {
+        width: 110%;
+        transform: translate(-4.45%, -55%);
+    }
+
+    .div_suberpour {
+        padding: 3em;
+        top: 10%;
+        background-color: transparent;
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .div_suberpour div:nth-child(2) img {
+        transform: translateY(5%);
+    }
+
+    section:first-child>div:first-child div:nth-child(2) h2 {
+        font-family: 'Montserrat', sans-serif;
+        width: fit-content;
+        font-size: calc(146pt / 3);
+        color: #393F57;
+    }
+
+    h1 {
+        position: absolute;
+        font-family: 'Alex Brush', cursive;
+        font-size: 90pt;
+        top: 35%;
+        font-weight: 100;
+        color: #FBC046;
+    }
+
+    .grid_informs {
+        padding: 4em 4em;
+    }
+
+    .section_start {
+        padding: 1em;
+        padding-left: 5.5em;
+    }
+
+    .grid_start {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
+
+    .button_close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: calc(100% - 50px);
+        background-color: white;
+        z-index: 1000;
+    }
+
+
+    @keyframes animatedgradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+
+    /*font-family: 'Montserrat', sans-serif;*/
+    @keyframes scroll {
+        100% {
+            background-position: 0px -400%;
+        }
+    }
+
+    .chevron {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        transition: 0.5s;
+        z-index: 1000;
+    }
+
+    .chevron:hover svg {
+        stroke: #FBC046;
+        transition: 0.5s;
+    }
+
+    .chevron:not(:hover) svg {
+        transition: 0.5s;
+    }
+
+    .chevronRight {
+        top: 50%;
+    }
+
+    .chevronLeft {
+        right: 1%;
+        transform: scaleX(-1);
+        top: 50%;
+    }
+    .any-starter-topic img:hover{
+       scale: 1.02;
+       transition: 0.5s;
+    }
+    .any-starter-topic img:not(:hover){
+       transition: 0.5s;
+    }
+    
+    /**/
+</style>
+
+<body>
+    <main>
+        <section>
+            <div>
+                <div>
+                    <img src="Assets/design_element.png" alt="">
+                    <div class="div_suberpour">
+                        <div>
+                            <h2>Organização</h2>
+                            <h2>Financeira</h2>
+                            <h1>Infantil</h1>
+                            <p style="margin-top: 10vh; font-family: 'Montserrat', sans-serif;">Clique nos tópicos para mais informações!</p>
+                        </div>
+                        <div>
+                            <img src="Assets/design_woman.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_start" style="margin-top: 10vh;">
+            <div class="grid_start">
+                <div class="any-starter-topic" data-topic="1"><img style="transform: translateX(17%);"
+                        src="Assets/topic1.png" alt=""></div>
+                <div><img style="transform: translateY(105%);" src="Assets/arrow1.png" alt=""></div>
+                <div class="any-starter-topic" data-topic="2"><img style="transform: translate(-55%,105%);"
+                        src="Assets/topic2.png" alt=""></div>
+                <div><img style="transform: translate(155%, 75%);" src="Assets/arrow2.png" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div class="any-starter-topic" data-topic="3"><img style="transform: translateX(17%);"
+                        src="Assets/topic3.png" alt=""></div>
+                <div><img style="transform: translateY(275%);" src="Assets/arrow3.png" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div class="any-starter-topic" data-topic="4"><img style="transform: translate(-55%,0);"
+                        src="Assets/topic4.png" alt=""></div>
+                <div class="any-starter-topic" data-topic="5"><img style="transform: translateX(17%);"
+                        src="Assets/topic5.png" alt=""></div>
+                <div><img src="Assets/arrow4.png" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div><img style="transform: translate(-25%, -26%);" src="Assets/arrow5.png" alt=""></div>
+                <div class="any-starter-topic" data-topic="6"><img style="transform: translate(-55%,0);"
+                        src="Assets/topic6.png" alt=""></div>
+                <div class="any-starter-topic" data-topic="7"><img style="transform: translateX(17%);"
+                        src="Assets/topic7.png" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div><img style="transform: translate(-106%, -6%) rotate(344deg);" src="Assets/arrow6.png" alt=""></div>
+                <div><img style="transform: translate(113%, 14%) rotate(21deg);" src="Assets/arrow7.png" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div class="any-starter-topic" data-topic="8"><img style="transform: translate(-55%,0);"
+                        src="Assets/topic8.png" alt=""></div>
+                <div class="any-starter-topic" data-topic="9"><img style="transform: translateX(17%);"
+                        src="Assets/topic9.png" alt=""></div>
+                <div><img src="Assets/arrow8.png" alt=""></div>
+                <div><img src="" alt=""></div>
+            </div>
+        </section>
+    </main>
+    </section>
+    <section data-topic="" class="overlay_display" id="show_info">
+        <div class="button_close" id="btn_close">
+            <svg viewBox="0 0 24 24" width="44" height="44" stroke="black" stroke-width="2" fill="black"
+                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </div>
+        <div class="chevron chevronRight" id="arrow_left">
+            <svg viewBox="0 0 24 24" width="74" height="74" stroke="white" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </div>
+        <div class="chevron chevronLeft" id="arrow_right">
+            <svg viewBox="0 0 24 24" width="74" height="74" stroke="white" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </div>
+        <div style="width: 100%;
+        position: relative;">
+            <div style="width: 50%;
+        margin: 0 auto;
+        color: white;
+        text-align: justify;
+        ">
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 2em; text-align: center;" id="page-counter">
+                </p>
+            </div>
+        </div>
+        <div style="width: 100%;
+         text-align: center;
+         color: #FBC046;
+         font-size: 3em;
+         font-family: 'Bebas Neue', sans-serif;
+         letter-spacing: 0.5em;">
+            <h2 style="text-transform: uppercase;" id="title_overlay"></h2>
+        </div>
+        <div style="width: 100%;
+        margin-top: 2vh;
+        height: 45vh;
+        min-height: 45vh;
+        position: relative;">
+            <div style="width: 50%;
+        min-width: 50%;
+        height: 55vh;
+        min-height: 55vh;
+        margin: 0 auto;">
+                <img style="border: 10px solid; border-image: linear-gradient(45deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1; width: 95%;max-height: 55vh;"
+                    id="image-content-overlay" src="" alt="">
+            </div>
+        </div>
+        <div style="width: 100%;
+        padding: 5rem;
+        position: relative;
+        margin-top: 6vh;">
+            <div style="width: 50%;
+        margin: 0 auto;
+        color: white;
+        text-align: justify;
+        ">
+                <p style="font-family: 'Montserrat', sans-serif;" id="text-description"></p>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    const overlay_display = document.getElementById('show_info')
+
+    document.querySelector('.button_close').addEventListener('click', () => {
+        overlay_display.classList.remove("dispblock")
+        document.body.style.overflowX = "auto"
+        document.body.style.overflowY = "auto"
+    })
+
+    document.getElementById('arrow_left').addEventListener('click', () => {
+        let dataTopicValue = overlay_display.getAttribute('data-topic')
+        if (dataTopicValue > 1) {
+            dataSelectorDisplay((parseInt(dataTopicValue) - 1).toString())
+        }
+    })
+    document.getElementById('arrow_right').addEventListener('click', () =>{
+        let dataTopicValue = overlay_display.getAttribute('data-topic')
+        if (dataTopicValue < 9) {
+            dataSelectorDisplay((parseInt(dataTopicValue) + 1).toString())
+        }
+    })
+    document.querySelectorAll('.any-starter-topic').forEach(e => {
+        e.addEventListener('click', () => {
+            overlay_display.setAttribute('data-topic', e.getAttribute('data-topic'))
+            var dataTopicOverlay = e.getAttribute('data-topic')
+            overlay_display.classList.add('dispblock');
+            dataSelectorDisplay(dataTopicOverlay)
+        })
+    })
+
+    function dataSelectorDisplay(baseStarterTopicNum) {
+        overlay_display.setAttribute('data-topic', baseStarterTopicNum)
+        switch (baseStarterTopicNum) {
+            case '1':
+                var title = "importancia da conversa"
+                var linkImg = 'Assets/imgTopic1.jpg';
+                var textDescription = "Conversas sobre educação financeira com os filhos desempenham um papel crucial no desenvolvimento de habilidades e hábitos financeiros saudáveis. Ao discutir assuntos relacionados ao dinheiro desde cedo, os pais têm a oportunidade de ensinar valores como poupança, orçamento e investimento. Além disso, promovem a conscientização sobre o valor do dinheiro, o que ajuda a evitar problemas financeiros no futuro. Essas conversas também fortalecem o vínculo entre pais e filhos, tornando-se uma oportunidade para compartilhar experiências e lições de vida que podem moldar o sucesso financeiro e a segurança de seus filhos ao longo de suas vidas."
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+            case '2':
+                var title = "metas e economia"
+                var linkImg = 'Assets/imgTopic2.jpg'
+                var textDescription = "Estabelecer economias e metas financeiras para os filhos é uma prática que vai muito além de simplesmente comprar brinquedos. Ao ensiná-los a economizar e definir metas financeiras desde cedo, os pais estão proporcionando valiosas lições sobre responsabilidade e planejamento. Essa educação financeira prepara as crianças para a vida adulta, ensinando-as a valorizar o dinheiro e a conquistar objetivos. Além disso, ao economizar para algo que desejam, como brinquedos, as crianças aprendem a adiar a gratificação, o que é fundamental para evitar o consumismo impulsivo. Essas lições formam a base para uma relação saudável e consciente com o dinheiro ao longo de suas vidas, capacitando-os a fazer escolhas financeiras mais inteligentes e alcançar metas maiores no futuro."
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+            case '3':
+                var title = "orçamentos e despesas"
+                var linkImg = 'Assets/imgTopic3.jpg'
+                var textDescription = "Ensinar às crianças a importância de estabelecer metas e orçamentos para suas despesas é um passo fundamental na construção de habilidades financeiras sólidas. Ao envolvê-las nesse processo, estamos capacitando-as a compreender o valor do dinheiro e a tomar decisões conscientes sobre como gastá-lo. Além disso, ao definir metas financeiras, as crianças aprendem a planejar, sonhar alto e a ter disciplina para alcançar seus objetivos. Isso as prepara para a vida adulta, onde a gestão financeira é essencial para a independência e o sucesso. Estabelecer orçamentos ajuda as crianças a compreender a importância de equilibrar suas despesas, evitar dívidas desnecessárias e economizar para o futuro. Essas lições precoces têm o potencial de criar adultos financeiramente responsáveis, capazes de tomar decisões informadas e desfrutar de uma vida financeiramente estável. "
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+            case '4':
+                var title = "incentivos"
+                var linkImg = 'Assets/imgTopic4.jpg'
+                var textDescription = "Recompensar as crianças por tarefas cotidianas pode ser um incentivo poderoso para ajudá-las a cumprir metas e desenvolver responsabilidade. Estabelecer um sistema de recompensas, como mesada ou prêmios por tarefas bem-feitas, ensina desde cedo a conexão entre esforço e recompensa. Isso motiva as crianças a serem mais proativas na realização de suas responsabilidades e a entender que o trabalho árduo traz benefícios tangíveis. Além disso, recompensas por metas cumpridas podem ensinar lições valiosas sobre planejamento e gestão financeira. As crianças aprendem a definir objetivos, traçar um caminho para alcançá-los e, em seguida, apreciar o resultado de seu esforço. Isso ajuda a desenvolver habilidades de organização e disciplina, bem como a valorizar o dinheiro de uma forma saudável."
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+            case '5':
+                var title = "registros e controle de gastos"
+                var linkImg = "Assets/imgTopic5.jpg"
+                var textDescription = "Manter registros detalhados de gastos e despesas é uma prática financeira fundamental que beneficia pessoas de todas as idades. Essa prática oferece uma visão clara de como o dinheiro está sendo gasto e permite um melhor controle financeiro. Para crianças e adolescentes, aprender a acompanhar seus gastos desde cedo é especialmente valioso. Registrar despesas ensina responsabilidade financeira, incentivando a conscientização sobre para onde o dinheiro está indo. Isso ajuda a evitar o gasto impulsivo e a tomar decisões mais ponderadas sobre como utilizar os recursos financeiros disponíveis. Além disso, ao manter registros, as crianças e jovens desenvolvem habilidades de organização e matemática, que são úteis em sua vida cotidiana e futuras decisões financeiras."
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+            case '6':
+                var title = "progresso"
+                var linkImg = 'Assets/imgTopic6.jpg'
+                var textDescription = "Acompanhar o progresso das economias é uma prática fundamental para pessoas de todas as idades, pois fornece insights valiosos sobre o caminho para alcançar objetivos financeiros. Para crianças e jovens, essa é uma lição essencial que ajuda a desenvolver habilidades financeiras sólidas desde cedo. Acompanhar o progresso das economias envolve manter um registro contínuo do dinheiro economizado, observar o crescimento desse valor ao longo do tempo e definir metas financeiras alcançáveis. Isso ensina não apenas a importância da paciência, mas também a valorização de cada pequeno passo em direção a um objetivo. Quando as crianças veem o crescimento de suas economias, isso as motiva a continuar economizando e a planejar com antecedência."
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+            case '7':
+                var title = "Ajuda e Incentivo"
+                var linkImg = 'Assets/imgTopic7.jpg'
+                var textDescription = "Auxiliar as crianças no controle de seus gastos e incentivá-las desempenha um papel vital na formação de hábitos financeiros saudáveis desde a infância. Além de transmitir lições cruciais sobre o valor do dinheiro, essa prática ajuda a desenvolver habilidades de orçamentação, evitando impulsos consumistas, e, ao fazer isso, prepara as crianças para uma vida adulta financeiramente independente e bem-sucedida."
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+            case '8':
+                var title = "Reflexão"
+                var linkImg = 'Assets/imgTopic8.jpg'
+                var textDescription = "Incentivar os filhos a refletir sobre suas despesas e metas é uma prática financeira fundamental que promove o desenvolvimento de habilidades de pensamento crítico e responsabilidade. Ao fazer com que as crianças ponderem sobre suas despesas, os pais as capacitam a tomar decisões financeiras conscientes e avaliar o valor das coisas que desejam adquirir. Além disso, ao definir metas financeiras, as crianças aprendem a planejar, sonhar alto e a entender que o sucesso financeiro requer esforço e persistência. Essa prática não apenas ajuda a evitar gastos impulsivos, mas também prepara os filhos para a vida adulta, onde a capacidade de refletir sobre despesas e metas é essencial para alcançar estabilidade financeira e realização pessoal."
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+            case '9':
+                var title = "Metas em família"
+                var linkImg = 'Assets/imgTopic9.jpg'
+                var textDescription = "A criação de metas conjuntas em família desempenha um papel crucial no fortalecimento dos laços familiares e no estabelecimento de uma base sólida para o sucesso financeiro e pessoal. Quando a família se une para estabelecer metas comuns, promove-se um senso de unidade e colaboração. Além disso, definir metas juntos ensina às crianças princípios valiosos, como responsabilidade, planejamento e trabalho em equipe. Essas metas podem variar, desde economizar para férias em família até reduzir despesas domésticas. Ao trabalhar juntos para alcançar esses objetivos, todos na família aprendem a contribuir e a valorizar o esforço coletivo. Além disso, cria-se um ambiente onde a comunicação e o apoio mútuo são incentivados, fortalecendo os relacionamentos familiares."
+                dataDisplayStart(title, linkImg, textDescription)
+                break;
+        }
+    }
+
+    function dataDisplayStart(titleContent, img_url, textDescription) {
+        document.body.style.overflowX = "hidden"
+        document.body.style.overflowY = "hidden"
+        document.getElementById('title_overlay').textContent = titleContent
+        document.getElementById('image-content-overlay').src = img_url
+        document.getElementById('text-description').textContent = textDescription
+        document.getElementById('page-counter').textContent = `${overlay_display.getAttribute('data-topic')}/9`
+    }
+
+</script>
+
+</html>
